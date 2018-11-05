@@ -16,6 +16,18 @@
 				    <%= f.input :email, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
 				  	</div>
 					</div>
+					<div class="field">
+              <div class="control">
+                <%= f.label :password,'Choose a Password:', class:'label'%>
+                  <%= f.password_field :password, class:'input' %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <%= f.label :password_confirmation,'Password Confirmation:', class:'label' %>
+                  <%= f.password_field :password_confirmation, class:'input'  %>
+              </div>
+            </div>
 				<%= f.button :submit, "Sign up", class:"button is-outlined is-medium" %>
 
 				<% end %>

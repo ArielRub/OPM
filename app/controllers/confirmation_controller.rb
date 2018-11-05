@@ -5,7 +5,7 @@ class ConfirmationsController < Devise::ConfirmationsController
     # If you are using rails 5.1+ use: skip_before_action
     # skip_before_filter :require_no_authentication
     # skip_before_filter :authenticate_user!
-  
+    before_action :authenticate_user!
     # PUT /resource/confirmation
     def update
       with_unconfirmed_confirmable do
